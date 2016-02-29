@@ -1,8 +1,8 @@
 import d3 from 'd3';
 
-var d3Chart = {};
+var D3Chart = {};
 
-d3Chart.create = function(el) {
+D3Chart.create = function(el) {
   var margin = {top: 1, right: 50, bottom: 30, left: 50},
       width = 800 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
@@ -86,7 +86,7 @@ d3Chart.create = function(el) {
   this.data = [];
 };
 
-d3Chart.update = function(data) {
+D3Chart.update = function(data) {
   this.data = data;
   this.xScale.domain([data[0].date, data[data.length - 1].date]);
   this.yScale.domain(d3.extent(data, function(d) { return d.price; }));
@@ -95,8 +95,8 @@ d3Chart.update = function(data) {
   this.path.datum(data).attr('d', this.line);
 };
 
-d3Chart._mouseMove = function() {
-  var ch = d3Chart;
+D3Chart._mouseMove = function() {
+  var ch = D3Chart;
 
   if(!ch.data.length)
     return;
@@ -113,4 +113,4 @@ d3Chart._mouseMove = function() {
   ch.focus.select('text').text(ch.formatCcy(d.price));
 };
 
-module.exports = d3Chart;
+module.exports = D3Chart;
