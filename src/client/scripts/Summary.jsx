@@ -5,7 +5,7 @@ var Summary = React.createClass({
     return (
       <div className="summary">
         <div className="companyName">
-          {this.props.data.name} ({this.props.data.symbol})
+          <span className="name">{this.props.data.name}</span> (<span className="symbol">{this.props.data.symbol}</span>)
         </div>
         <div>Recommendation: wait</div>
       </div>
