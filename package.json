@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node src/server/index.js",
     "webpack": "webpack --config webpack.config.js",
-    "webpack-server": "npm run webpack && ln -s ../src/client/index.html dist; webpack-dev-server --content-base dist/ --devtool source-map --colors --port 3000",
-    "test": "karma start"
+    "webpack-server": "npm run webpack && cp src/client/index.html dist && webpack-dev-server --content-base dist/ --devtool source-map --colors --port 3000",
+    "test": "karma start",
+    "release": "webpack --optimize-minimize --config webpack.config.js && cp src/client/index.html dist"
   },
   "dependencies": {
     "d3": "^3.5.16",
