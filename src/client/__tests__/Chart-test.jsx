@@ -4,7 +4,7 @@ import TestUtils from 'react-addons-test-utils';
 import expect from 'expect';
 
 import Chart from '../scripts/Chart.jsx';
-import mockChartData from './utils.js';
+import mock from './utils.js';
 
 describe('Chart', function() {
   it('loads without error', function() {
@@ -28,7 +28,7 @@ describe('Chart', function() {
   it('renders d3 chart', function() {
     var node = document.createElement('div');
     var chart = ReactDOM.render(
-      <Chart data={mockChartData} dispSize={31} />,
+      <Chart data={mock.mockChartData1} dispSize={31} />,
       node
     );
     chart.forceUpdate();
