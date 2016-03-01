@@ -42,6 +42,7 @@ var SymbolForm = React.createClass({
 
   handleSelect: function(symbol) {
     this.props.onSymbolSubmit(symbol);
+    this.autocomplete.setState({value: ''});
   },
 
   sortCompanies: function(a, b, value) {
@@ -65,6 +66,7 @@ var SymbolForm = React.createClass({
     return (
       <div className="symbolForm">
         <Autocomplete
+            ref={(ref) => this.autocomplete = ref}
             items={this.companyList}
             getItemValue={(item) => item.symbol}
             shouldItemRender={this.matchCompanyToTerm}
