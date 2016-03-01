@@ -11,7 +11,7 @@ import Chart from './Chart.jsx';
 var App = React.createClass({
   dateFormat: d3.time.format.utc('%Y%m%d'),
   parseDate:  d3.time.format.utc('%Y%m%d').parse,
-  tickerUrl:  'http://stocksplosion.apsis.io/api/company/',
+  tickerUrl:  'http://stocksplosion.apsis.io/api/company',
   defaultSym: 'DXBT',
   dispSize:   31,
 
@@ -29,7 +29,7 @@ var App = React.createClass({
     var end = this.dateFormat(d);
     d.setDate(d.getDate() - this.dispSize);
     var start = this.dateFormat(d);
-    var url = this.tickerUrl + symbol + '?startdate=' + start + '&enddate=' + end;
+    var url = this.tickerUrl + '/' + symbol + '?startdate=' + start + '&enddate=' + end;
 
     d3.json(url, function(err, result) {
       if (err) { console.log(err); return; }

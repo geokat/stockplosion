@@ -38,7 +38,7 @@ var Chart = React.createClass({
     } else {
       var end = this.cache[0].date;
       var start = d3.time.day.offset(end, -31);
-      var url = this.props.tickerUrl + this.props.data.symbol +
+      var url = this.props.tickerUrl + '/' + this.props.data.symbol +
                 '?startdate=' + this.props.dateFormat(start) +
                 '&enddate=' + this.props.dateFormat(end);
       d3.json(url, function(err, result) {

@@ -7,7 +7,6 @@ import Chart from '../scripts/Chart.jsx';
 import mockChartData from './utils.js';
 
 describe('Chart', function() {
-  console.log(mockChartData);
   it('loads without error', function() {
     var chart = TestUtils.renderIntoDocument(
       <Chart />
