@@ -1,0 +1,42 @@
+[COMPANY] proposes to develop an application that will use
+STOCKPLOSION's Market API to provide a summary of recent stock
+performance and an automated trading recommendation. The application
+will provide a single-page web interface allowing the analyst to enter
+the ticker symbol/name for a company's stock and get a simple
+buy/sell/wait recommendation in return.
+
+The summary will include an interactive chart of the latest stock
+performance based on a 31-day window (as returned by the Market API)
+that allows the analyst to browse back to earlier periods for
+comparison. The recommendation will be based on where the current
+stock price is in relation to the period's maximum and minimum
+prices. The strategy is to maximize short-term gains by selling
+immediately after reaching the maximum and buying after reaching the
+minimum price for the period.
+
+The UI will also include a dropdown box with symbols/names of all
+companies currently listed on the Stockplosion Exchange, allowing the
+analyst to select/enter the company in which they are
+interested. Using a one-page application layout makes the process
+repeatable and efficient, as no page reloads are required.
+
+The following is the breakdown of billable time for each
+stage/component of the project.
+
+Study of project requirements
+and already available resources         2 hours
+
+Proposal preparation                    1 hours
+
+Summary UI                              4 hours
+
+Symbol dropdown                         1 hours
+
+Integration                             1 hours
+
+Testing                                 1 hours
+
+Miscellaneous                           1 hours
+
+
+Total project cost is $1650 (11 hours at $150/hour).
